@@ -25,7 +25,6 @@ impl Map {
 
     pub fn render(&self, ctx: &mut BTerm, camera: &Camera) {
         ctx.set_active_console(0);
-
         for y in camera.top_y..camera.bottom_y {
             for x in camera.left_x..camera.right_x {
                 if self.in_bounds(Point::new(x, y)) {
@@ -35,7 +34,7 @@ impl Map {
                             ctx.set(
                                 x - camera.left_x,
                                 y - camera.top_y,
-                                GREY,
+                                WHITE,
                                 BLACK,
                                 to_cp437('.'),
                             );
@@ -44,7 +43,7 @@ impl Map {
                             ctx.set(
                                 x - camera.left_x,
                                 y - camera.top_y,
-                                GREEN,
+                                WHITE,
                                 BLACK,
                                 to_cp437('#'),
                             );
