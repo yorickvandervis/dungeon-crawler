@@ -11,3 +11,5 @@ pub fn player_input(
     #[resource] camera: &mut Camera,
 ) {
 }
+
+// Test
